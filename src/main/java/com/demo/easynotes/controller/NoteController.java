@@ -40,7 +40,7 @@ public class NoteController {
     // Get a Single Note
 	@GetMapping("/notes/{id}")
 	public ResponseEntity<Note> getNoteById(@PathVariable(value = "id") Long noteId) {
-	    Note note = noteRepository.findOne(noteId);
+	    Note note = noteRepository.getOne(noteId);
 	    if(note == null) {
 	        return ResponseEntity.notFound().build();
 	    }
@@ -51,7 +51,7 @@ public class NoteController {
 	@PutMapping("/notes/{id}")
 	public ResponseEntity<Note> updateNote(@PathVariable(value = "id") Long noteId, 
 	                                       @Valid @RequestBody Note noteDetails) {
-	    Note note = noteRepository.findOne(noteId);
+	    Note note = noteRepository.getOne(noteId);
 	    if(note == null) {
 	        return ResponseEntity.notFound().build();
 	    }
@@ -65,7 +65,7 @@ public class NoteController {
     // Delete a Note
 	@DeleteMapping("/notes/{id}")
 	public ResponseEntity<Note> deleteNote(@PathVariable(value = "id") Long noteId) {
-	    Note note = noteRepository.findOne(noteId);
+	    Note note = noteRepository.getOne(noteId);
 	    if(note == null) {
 	        return ResponseEntity.notFound().build();
 	    }

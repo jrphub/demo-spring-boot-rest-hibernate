@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.demo.easynotes.model.Note;
 
 @Repository
-public interface NoteRepository extends JpaRepository<Note, Long>{
+public interface NoteRepository extends JpaRepository<Note, Long> {
 
 }
