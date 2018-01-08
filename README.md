@@ -14,3 +14,4 @@ Features added so far :
 4. Server side template using Thymeleaf
 5. Hibernate as ORM tool
 6. Connecting to MySQL as database
+7. Remote API calling
